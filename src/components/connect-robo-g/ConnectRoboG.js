@@ -21,10 +21,6 @@ const ConnectRoboG = () => {
             console.log("this is the data received from server:", data);
         });
 
-        socket.on("movement", (data) => {
-            console.log("this is coming bro:", data);
-        });
-
         // Clean up the effect
         return () => socket.disconnect();
     }, []);
