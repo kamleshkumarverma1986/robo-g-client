@@ -1,0 +1,11 @@
+.center-action-button {
+    display: block;
+    height: 38%;
+    width: 38%;
+    position: absolute;
+    top: 31%;
+    left: 31%;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.8);
+}
