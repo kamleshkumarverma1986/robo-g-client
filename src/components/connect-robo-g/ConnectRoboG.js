@@ -14,21 +14,18 @@ const ConnectRoboG = () => {
     
     useEffect(() => {
         
-        //on connection establish
-        socket.on("connected", data => {
+        socket.on("socket-connection-established", data => {
             socket.emit("REGISTER-FE-CLIENT", {
-                NodeMCU_MacAddress: "10:52:1C:02:05:4E",
-                callback: (errorObj) => {
-                    if (!errorObj.error) {
-                        setRoboG_Connected(true);
-                    } else {
-                        alert(errorObj.message);
-                    }
+                NodeMCU_MacAddress: "10:52:1C:02:05:4E"
+            }, (errorObj) => {
+                if (!errorObj.error) {
+                    setRoboG_Connected(true);
+                } else {
+                    alert(errorObj.message);
                 }
             });
         });
 
-        // Clean up the effect
         return () => socket.disconnect();
     }, []);
 
