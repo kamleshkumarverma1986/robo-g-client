@@ -6,8 +6,7 @@ import Movement from "../../components/movement/Movement";
 import SocketErrorHandler from "../../components/socket-error-handler/SocketErrorHandler";
 
 const socket = socketIOClient(process.env.REACT_APP_SERVER_BASE_URL, {
-    path: "/api/v1/robo-g-connect/socket.io",
-    query: { "name": "testing"}
+    path: "/api/v1/robo-g-connect/socket.io"
 });
 
 const ConnectRoboG = () => {
@@ -17,8 +16,16 @@ const ConnectRoboG = () => {
         
         //on connection establish
         socket.on("connected", data => {
-            setRoboG_Connected(true);
-            console.log("this is the data received from server:", data);
+            socket.emit("REGISTER-FE-CLIENT", {
+                NodeMCU_MacAddress: "10:52:1C:02:05:4E",
+                callback: (errorObj) => {
+                    if (!errorObj.error) {
+                        setRoboG_Connected(true);
+                    } else {
+                        alert(errorObj.message);
+                    }
+                }
+            });
         });
 
         // Clean up the effect
