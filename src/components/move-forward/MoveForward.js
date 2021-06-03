@@ -2,7 +2,7 @@ import "./MoveForward.css";
 
 const MoveForward = ({onMovement}) => {
     return (
-        <button className="move-button forward" onClick={()=> onMovement("forward")}>LED OFF</button>
+        <button className="move-button forward" onClick={()=> onMovement("forward")}></button>
     )
 }
 export default MoveForward;

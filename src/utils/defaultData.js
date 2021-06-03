@@ -1,6 +1,6 @@
 // My MAC address for robot: 10:52:1C:02:05:4E
 export const defaultMacAddress = {
-    value: "ka",
+    value: "",
     get data() {
       const data = localStorage?.getItem("defaultMacAddress");
       if (data) {
