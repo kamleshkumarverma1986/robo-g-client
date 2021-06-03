@@ -1,11 +1,9 @@
 import React, {useState} from "react";
 import "./Login.css";
-import keyStrokeAudio from "../../assets/wavs/key_stroke.wav";
 import formSubmitAudio from "../../assets/wavs/form_submit.wav";
 
 const Login = ({macAddress, onMacAddressChange}) => {
     const [macAddressValue, setMacAddressValue] = useState(macAddress);
-    const [keyStrokeWav] = useState(new Audio(keyStrokeAudio));
     const [formSubmitWav] = useState(new Audio(formSubmitAudio));
 
     const onFormSubmitHandler = (event) => {
@@ -22,10 +20,7 @@ const Login = ({macAddress, onMacAddressChange}) => {
                     <input
                         type="text"
                         value={macAddressValue}
-                        onChange={(event) => {
-                            setMacAddressValue(event.target.value);
-                            keyStrokeWav.play();
-                        }}
+                        onChange={(event) => setMacAddressValue(event.target.value)}
                         required
                         autoFocus
                     />

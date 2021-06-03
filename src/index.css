@@ -173,3 +173,9 @@ input[type=text]:focus ~ .highlight {
   from { background: #4285f4; }
   to   { width: 0; background: transparent; }
 }
+
+@media all and (max-width: 768px) {
+  input[type=text] {
+    font-size: 16px;
+  }
+}
