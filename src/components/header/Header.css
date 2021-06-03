@@ -3,7 +3,7 @@
 	width: 100%;
 	height: 41px;
 	top: 0px;
-	background-color:#ffffff;
+	background-color:#282c34;
 	border-bottom: 1px solid pink;
 	z-index: 105;
 	display: flex;
@@ -11,36 +11,11 @@
   	align-items: center;
 }
 
-.menu {
-	display: inline-block;
-    cursor: pointer;
-    position: fixed;
-    top: 7px;
-    left: 15px;
-}
-
-.bar1, .bar2, .bar3 {
-	width: 30px;
-    height: 1px;
-    background-color: #333;
-    margin: 6px 0;
-}
-
-.open-sidenav {
-	width: 40% !important;
-}
-
-.header-logo {
+.site-header .header-logo {
 	font-size: 22px;
     font-style: italic;
     font-family: 'Impact, fantasy';
     margin: 0 auto;
     display: inline-block;
-    color: #282c34;
-}
-
-@media all and (max-width: 768px) {
-	.open-sidenav {
-		width: 100% !important;
-	}
+    color: #ffffff;
 }

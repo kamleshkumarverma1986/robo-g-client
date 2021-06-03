@@ -1,11 +1,19 @@
 .footer {
     position: fixed;
-    background-color: #aaa;
-    opacity: .8;
+    background-color: #282c34;
+    opacity: 0.7;
     bottom: 0;
     width: 100%;
     height: auto;
-    color: #000008;
+    color: #ffffff;
     text-align: center;
     font-style: italic;
+    border-top: 1px solid #ffffff;
+}
+
+.social-network-icon {
+    margin: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #ffffff;
 }
