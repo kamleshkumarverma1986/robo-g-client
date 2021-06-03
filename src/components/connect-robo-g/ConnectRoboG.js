@@ -15,7 +15,7 @@ const ConnectRoboG = () => {
     useEffect(() => {
         
         socket.on("socket-connection-established", data => {
-            socket.emit("REGISTER-FE-CLIENT", {
+            socket.emit("REGISTER-FRONT-END-CLIENT", {
                 NodeMCU_MacAddress: "10:52:1C:02:05:4E"
             }, (errorObj) => {
                 if (!errorObj.error) {
