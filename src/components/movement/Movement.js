@@ -3,7 +3,7 @@ import MoveForward from "../../components/move-forward/MoveForward";
 import MoveRight from "../../components/move-right/MoveRight";
 import MoveLeft from "../../components/move-left/MoveLeft";
 import MoveBack from "../../components/move-back/MoveBack";
-import CenterButton from "../../components/center-button/CenterButton";
+import MoveStop from "../../components/move-stop/MoveStop";
 
 const Movement = ({socket}) => {
     const onMovementHandler = (movement) => {
@@ -15,7 +15,7 @@ const Movement = ({socket}) => {
             <MoveRight onMovement={onMovementHandler} />
             <MoveLeft onMovement={onMovementHandler} />
             <MoveBack onMovement={onMovementHandler} />
-            <CenterButton onMovement={onMovementHandler} />
+            <MoveStop onMovement={onMovementHandler} />
         </div>
     )
 }

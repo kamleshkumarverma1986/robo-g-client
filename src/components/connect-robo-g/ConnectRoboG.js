@@ -3,6 +3,8 @@ import "./ConnectRoboG.css";
 import { createSocketConnection } from "../../utils/socketIO";
 import Connecting from "../../components/connecting/Connecting";
 import Movement from "../../components/movement/Movement";
+import Camera from "../../components/camera/Camera";
+import BuiltinLed from "../../components/builtin-led/BuiltinLed";
 import SocketErrorHandler from "../../components/socket-error-handler/SocketErrorHandler";
 
 const ConnectRoboG = ({macAddress}) => {
@@ -42,7 +44,13 @@ const ConnectRoboG = ({macAddress}) => {
             {(!isRoboG_Connected && error) && (
                 <div className="centered">{error}</div>
             )}
-            {isRoboG_Connected && <Movement socket={socketIO} />}
+            {isRoboG_Connected && (
+                <div>
+                    <Camera />
+                    <BuiltinLed socket={socketIO} />
+                    <Movement socket={socketIO} />
+                </div>
+            )}
         </div>
     )
 }

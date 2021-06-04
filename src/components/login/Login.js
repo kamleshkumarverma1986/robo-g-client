@@ -14,7 +14,7 @@ const Login = ({macAddress, onMacAddressChange}) => {
 
     return (
         <div className="text-align-center">
-           <small> Access me from anywhere! </small>
+           <small className="tag-line"> Access me from anywhere! </small>
            <form onSubmit={onFormSubmitHandler} className="centered display-flex">
                 <div className="input-group">
                     <input

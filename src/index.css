@@ -2,7 +2,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  background-color: rgb(33, 33, 33);
   color: #ffffff;
   font-family: monospace;
 }
@@ -66,6 +66,10 @@ body {
 
 .display-flex {
   display: flex;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
 }
 
 /* Input Related CSS */
@@ -176,6 +180,6 @@ input[type=text]:focus ~ .highlight {
 
 @media all and (max-width: 768px) {
   input[type=text] {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
