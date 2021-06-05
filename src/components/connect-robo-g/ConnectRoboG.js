@@ -17,6 +17,7 @@ const ConnectRoboG = ({macAddress}) => {
         setSocketIO(socket);
         socket.on("socket-connection-established", () => {
             socket.emit("REGISTER-FRONT-END-CLIENT", {
+                clientName: "front-end",
                 NodeMCU_MacAddress: macAddress
             }, (errorObj) => {
                 if (!errorObj.error) {
