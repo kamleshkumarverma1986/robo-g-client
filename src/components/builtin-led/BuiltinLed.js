@@ -12,10 +12,9 @@ const BuiltinLed = ({socket}) => {
     }
     return (
         <div className="display-flex justify-content-space-around">
-            <div className="camera-icon">
-                <i className="fas fa-camera"></i>
+            <div ref={ref => ledElement = ref} className="led" onClick={onLedClickHandler}>
+                <div className="led-text">LED</div>
             </div>
-            <div ref={ref => ledElement = ref} class="led" onClick={onLedClickHandler}></div>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import Connecting from "../../components/connecting/Connecting";
 import Movement from "../../components/movement/Movement";
 import Camera from "../../components/camera/Camera";
 import BuiltinLed from "../../components/builtin-led/BuiltinLed";
+import Speed from "../../components/speed/Speed";
 import SocketErrorHandler from "../../components/socket-error-handler/SocketErrorHandler";
 
 const ConnectRoboG = ({macAddress}) => {
@@ -50,6 +51,7 @@ const ConnectRoboG = ({macAddress}) => {
                     <Camera />
                     <BuiltinLed socket={socketIO} />
                     <Movement socket={socketIO} />
+                    <Speed socket={socketIO} />
                 </div>
             )}
         </div>
