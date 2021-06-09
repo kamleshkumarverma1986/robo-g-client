@@ -1,6 +1,6 @@
 .camera {
     background-color: black;
-    height: 40vh;
+    height: 55vh;
     width: 100%;
     position: relative;
 }
@@ -13,6 +13,6 @@
 
 @media all and (max-width: 768px) {
     .camera {
-        height: 30vh;
+        height: 40vh;
     }
 }

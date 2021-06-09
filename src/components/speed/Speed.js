@@ -5,8 +5,11 @@ const Speed = ({socket}) => {
         socket.emit("movement", {movement: `speed-${data.target.value}`});
     }
     return (
-        <div className='text-align-center'>
-            <input type="range" min="0" max="9" onMouseUp={onSpeedChangeHandler}/>
+        <div className="speed-section text-align-center">
+            <label>Control Speed</label>
+            <div>
+                <input type="range" min="0" max="9" onMouseUp={onSpeedChangeHandler}/>
+            </div>
         </div>
     )
 }

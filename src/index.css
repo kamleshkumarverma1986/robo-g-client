@@ -72,6 +72,10 @@ body {
   justify-content: space-around;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
 /* Input Related CSS */
 .input-group {
   display: inline-block;

@@ -1,41 +1,36 @@
-.movement {
-    width: 300px;
-    height: 300px;
-    background: #60B8CE;
+.movement-btn {
+    border: none;
+    color: white;
+    padding: 20px 25px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    opacity: 0.6;
+}
+
+.rotate-btn-45d-left {
+    transform: rotate(-45deg) scaleY(1.5);
+}
+
+.rotate-btn-45d-right {
+    transform: rotate(45deg) scaleY(1.5);
+}
+
+.transform-scale-x {
+    transform: scaleX(1.5);
+}
+
+.transform-scale-y {
+    transform: scaleY(1.5);
+}
+
+.stop-btn {
     border-radius: 50%;
-    padding: 20px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    transform: rotate(45deg);
-    box-shadow: inset -12px 0 12px -6px #ddd, inset 12px 0 12px -6px #FFF, inset 0 0 0 12px #EEE, inset 2px 0 4px 12px rgba(0, 0, 0, 0.4), 1px 0 4px rgba(0, 0, 0, 0.8);
-    box-sizing: border-box;
-    position: relative;
-    margin: 10px auto;
+    background-color: transparent;
 }
 
-.move-button {
-    display: block;
-    width: 46%;
-    height: 46%;
-    margin: 2%;
-    position: relative;
-    float: left;
-    box-shadow: 1px 0px 3px 1px rgba(0, 0, 0, 0.4), inset 0 0 0 1px #FFF;
-}
-  
-.move-button::after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 50%;
-    background: #60B8CE;
-    position: absolute;
-    border-radius: inherit;
-}
-
-@media all and (max-width: 768px) {
-    .movement {
-        width: 250px;
-        height: 250px;
-    }
+/* Darker background on mouse-over */
+.movement-btn:hover {
+    background-color: RoyalBlue;
 }
