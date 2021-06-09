@@ -1,5 +1,6 @@
 .move-button.back {
     border-radius: 0 0 100% 0;
+    user-select: none;
 }
   
 .move-button.back::after {
