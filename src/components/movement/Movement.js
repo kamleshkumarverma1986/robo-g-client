@@ -9,14 +9,14 @@ const Movement = ({ socket }) => {
       <div className="display-flex justify-content-center">
         <button
           className="movement-btn"
-          onPointerDown={() => onMovementHandler("forward-left")}
+          onPointerDown={() => onMovementHandler("back-left")}
           onPointerUp={() => onMovementHandler("stop")}
         >
           <i className="fa fa-arrow-up rotate-btn-45d-left"></i>
         </button>
         <button
           className="movement-btn"
-          onPointerDown={() => onMovementHandler("forward")}
+          onPointerDown={() => onMovementHandler("right")}
           onPointerUp={() => onMovementHandler("stop")}
         >
           <i className="fa fa-arrow-up transform-scale-y"></i>
@@ -32,7 +32,7 @@ const Movement = ({ socket }) => {
       <div className="display-flex justify-content-center">
         <button
           className="movement-btn"
-          onPointerDown={() => onMovementHandler("left")}
+          onPointerDown={() => onMovementHandler("back")}
           onPointerUp={() => onMovementHandler("stop")}
         >
           <i className="fa fa-arrow-left transform-scale-x"></i>
@@ -45,7 +45,7 @@ const Movement = ({ socket }) => {
         </button>
         <button
           className="movement-btn"
-          onPointerDown={() => onMovementHandler("right")}
+          onPointerDown={() => onMovementHandler("forward")}
           onPointerUp={() => onMovementHandler("stop")}
         >
           <i className="fa fa-arrow-right transform-scale-x"></i>
@@ -54,14 +54,14 @@ const Movement = ({ socket }) => {
       <div className="display-flex justify-content-center">
         <button
           className="movement-btn"
-          onPointerDown={() => onMovementHandler("back-left")}
+          onPointerDown={() => onMovementHandler("forward-left")}
           onPointerUp={() => onMovementHandler("stop")}
         >
           <i className="fa fa-arrow-down rotate-btn-45d-right "></i>
         </button>
         <button
           className="movement-btn"
-          onPointerDown={() => onMovementHandler("back")}
+          onPointerDown={() => onMovementHandler("left")}
           onPointerUp={() => onMovementHandler("stop")}
         >
           <i className="fa fa-arrow-down transform-scale-y"></i>
