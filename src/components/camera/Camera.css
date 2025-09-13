@@ -1,18 +1,22 @@
 .camera {
-    background-color: black;
-    height: 55vh;
-    width: 100%;
-    position: relative;
+  background-color: black;
+  height: 55vh;
+  width: 100%;
+  position: relative;
 }
 
 .camera .camera-icon {
-    font-size: 24px;
-    opacity: 0.3;
-    position: absolute;
+  font-size: 24px;
+  opacity: 0.3;
+  position: absolute;
 }
 
 @media all and (max-width: 768px) {
-    .camera {
-        height: 40vh;
-    }
+  .camera {
+    height: 40vh;
+  }
+}
+
+.camera-text {
+  color: white;
 }

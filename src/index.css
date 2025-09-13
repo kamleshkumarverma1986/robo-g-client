@@ -2,17 +2,17 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(33, 33, 33);
-  color: #ffffff;
-  font-family: monospace;
+  background-color: red;
+  color: black !important;
+  font-family: cursive;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .route-container {
-	margin-top: 60px;
+  margin-top: 60px;
 }
 
 /* common container */
@@ -58,6 +58,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  color: black !important;
 }
 
 .text-align-center {
@@ -81,10 +82,9 @@ body {
   display: inline-block;
   position: relative;
   margin: 15px 0px 20px;
-  
 }
 
-input[type=text] {
+input[type="text"] {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
@@ -96,7 +96,7 @@ input[type=text] {
   font-family: monospace;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   outline: none;
 }
 
@@ -113,8 +113,8 @@ input[type=text]:focus {
   -webkit-transition: 0.2s ease all;
 }
 
-input[type=text]:focus ~ label,
-input[type=text]:valid ~ label {
+input[type="text"]:focus ~ label,
+input[type="text"]:valid ~ label {
   top: -9px;
   font-size: 10px;
   color: #fff;
@@ -128,7 +128,7 @@ input[type=text]:valid ~ label {
 
 .bar:before,
 .bar:after {
-  content: '';
+  content: "";
   height: 2px;
   width: 0;
   bottom: 1px;
@@ -147,8 +147,8 @@ input[type=text]:valid ~ label {
   right: 50%;
 }
 
-input[type=text]:focus ~ .bar:before,
-input[type=text]:focus ~ .bar:after {
+input[type="text"]:focus ~ .bar:before,
+input[type="text"]:focus ~ .bar:after {
   width: 50%;
 }
 
@@ -162,7 +162,7 @@ input[type=text]:focus ~ .bar:after {
   opacity: 0.5;
 }
 
-input[type=text]:focus ~ .highlight {
+input[type="text"]:focus ~ .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease;
@@ -170,20 +170,35 @@ input[type=text]:focus ~ .highlight {
 
 /* animations */
 @-webkit-keyframes inputHighlighter {
-  from { background: #4285f4; }
-  to   { width: 0; background: transparent; }
+  from {
+    background: #4285f4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @-moz-keyframes inputHighlighter {
-  from { background: #4285f4; }
-  to   { width: 0; background: transparent; }
+  from {
+    background: #4285f4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @keyframes inputHighlighter {
-  from { background: #4285f4; }
-  to   { width: 0; background: transparent; }
+  from {
+    background: #4285f4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 
 @media all and (max-width: 768px) {
-  input[type=text] {
+  input[type="text"] {
     font-size: 14px;
   }
 }

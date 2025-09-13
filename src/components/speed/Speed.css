@@ -1,3 +1,18 @@
 .speed-section {
-    margin-top: 20px;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.range {
+  color: purple;
+}
+
+.button-alignment {
+  display: flex;
+  justify-content: space-around;
+}
+
+.movement-btn1 {
+  background-color: maroon;
+  color: white;
 }

@@ -6,6 +6,7 @@ import Movement from "../../components/movement/Movement";
 import Camera from "../../components/camera/Camera";
 import Speed from "../../components/speed/Speed";
 import SocketErrorHandler from "../../components/socket-error-handler/SocketErrorHandler";
+import ControlButtons from "../../components/control-buttons/ControlButtons";
 
 const ConnectRoboG = ({ macAddress, resetLogin }) => {
   const [socketIO, setSocketIO] = useState(null);
@@ -16,21 +17,6 @@ const ConnectRoboG = ({ macAddress, resetLogin }) => {
     const socket = createSocketConnection();
     setSocketIO(socket);
     socket.on("socket-connection-established", () => {
-      //   socket.emit(
-      //     "REGISTER-NODE-MCU",
-      //     {
-      //       macAddress: "kamlesh",
-      //       clientName: "NodeMCU",
-      //     },
-      //     (errorObj) => {
-      //       if (!errorObj.error) {
-      //         setRoboG_Connected(true);
-      //       } else {
-      //         setError(errorObj.message);
-      //       }
-      //     }
-      //   );
-
       socket.emit(
         "REGISTER-FRONT-END-CLIENT",
         {
@@ -68,7 +54,7 @@ const ConnectRoboG = ({ macAddress, resetLogin }) => {
       {!isRoboG_Connected && error && (
         <div className="centered">
           <div>
-            <div> {error} </div>
+            <div className="error-show"> {error} </div>
             <button className="retry-button" onClick={onRetry}>
               Try Again
             </button>
@@ -80,6 +66,7 @@ const ConnectRoboG = ({ macAddress, resetLogin }) => {
           <Camera />
           <Movement socket={socketIO} />
           <Speed socket={socketIO} />
+          <ControlButtons socket={socketIO} resetLogin={resetLogin} />
         </div>
       )}
     </div>

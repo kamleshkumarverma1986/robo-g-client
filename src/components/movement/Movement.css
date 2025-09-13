@@ -1,36 +1,36 @@
 .movement-btn {
-    border: none;
-    color: white;
-    padding: 20px 25px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: transparent;
-    opacity: 0.6;
+  border: none;
+  color: white;
+  padding: 20px 25px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.6;
 }
 
 .rotate-btn-45d-left {
-    transform: rotate(-45deg) scaleY(1.5);
+  transform: rotate(-45deg) scaleY(1.5);
 }
 
 .rotate-btn-45d-right {
-    transform: rotate(45deg) scaleY(1.5);
+  transform: rotate(45deg) scaleY(1.5);
 }
 
 .transform-scale-x {
-    transform: scaleX(1.5);
+  transform: scaleX(1.5);
 }
 
 .transform-scale-y {
-    transform: scaleY(1.5);
+  transform: scaleY(1.5);
 }
 
 .stop-btn {
-    border-radius: 50%;
-    background-color: transparent;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 /* Darker background on mouse-over */
 .movement-btn:hover {
-    background-color: RoyalBlue;
+  background-color: RoyalBlue;
 }
