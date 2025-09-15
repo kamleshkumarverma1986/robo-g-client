@@ -7,6 +7,7 @@ import Camera from "../../components/camera/Camera";
 import Speed from "../../components/speed/Speed";
 import SocketErrorHandler from "../../components/socket-error-handler/SocketErrorHandler";
 import ControlButtons from "../../components/control-buttons/ControlButtons";
+import VoiceToText from "../../components/speech-to-text/SpeechToText";
 
 const ConnectRoboG = ({ macAddress, resetLogin }) => {
   const [socketIO, setSocketIO] = useState(null);
@@ -67,6 +68,7 @@ const ConnectRoboG = ({ macAddress, resetLogin }) => {
           <Movement socket={socketIO} />
           <Speed socket={socketIO} />
           <ControlButtons socket={socketIO} resetLogin={resetLogin} />
+          <VoiceToText socket={socketIO} />
         </div>
       )}
     </div>
